@@ -1,0 +1,15 @@
+/* ----- BASICS ----- */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: lightgray;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
