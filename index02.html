@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Student Name</title>
     <meta name=viewport content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/styles02.css">
@@ -10,9 +10,9 @@
 
   <body>
     <header>
-      <h1>Student Name</h1>
-
       <div class="main-nav">
+        <h1 id="top">Student Name</h1>
+
         <ul>
           <li>HOME</li>
           <li>PORTFOLIO</li>
@@ -20,50 +20,53 @@
         </ul>
       </div>
 
-      <div class="banner">
+      <div class="banner clear">
         <img src="images/responsive-layout-profile.png" alt="Student photo">
         <p>Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and am excited to put all my skills to use!</p>
       </div>
     </header>
 
     <div class="portfolio">
+      <h2>PORTFOLIO</h2>
 
-      <div class="card">
-        <h2>PORTFOLIO</h2>
-        <img src="images/portfolio-1.png" alt="Marketing Page">
-        <h3>Marketing Page</h3>
-        <p>This project shows the front page of a marketing website meant for a specific business I'm interested in.</p>
-      </div>
+      <div class="portfolio-cards">
 
-      <div class="card">
-        <img src="images/portfolio-2.png" alt="Search Page">
-        <h3>Search Page</h3>
-        <p>This project searches through a specific database to find information that the user is trying to look up.</p>
-      </div>
+        <div class="card">
+          <img src="images/portfolio-1.png" alt="Marketing Page">
+          <h3>Marketing Page</h3>
+          <p>This project shows the front page of a marketing website meant for a specific business I'm interested in.</p>
+        </div>
 
-      <div class="card">
-        <img src="images/portfolio-3.png" alt="Travel App">
-        <h3>Travel App</h3>
-        <p>This project compares travel times based on different transportation methods and tells you the best one.</p>
-      </div>
+        <div class="card">
+          <img src="images/portfolio-2.png" alt="Search Page">
+          <h3>Search Page</h3>
+          <p>This project searches through a specific database to find information that the user is trying to look up.</p>
+        </div>
 
-      <div class="card">
-        <img src="images/portfolio-4.png" alt="Map of Favorite Spots">
-        <h3>Map of Favorite Spots</h3>
-        <p>This project uses mapping apis to plot points for my favorite spots in the city for a do-it-yourself walking tour.</p>
-      </div>
+        <div class="card">
+          <img src="images/portfolio-3.png" alt="Travel App">
+          <h3>Travel App</h3>
+          <p>This project compares travel times based on different transportation methods and tells you the best one.</p>
+        </div>
 
-      <div class="card">
-        <img src="images/portfolio-5.png" alt="Photo Gallery">
-        <h3>Photo Gallery</h3>
-        <p>This project shows pictures from a recent trip to the viewer and allows them to easily navigate through photos.</p>
-      </div>
+        <div class="card">
+          <img src="images/portfolio-4.png" alt="Map of Favorite Spots">
+          <h3>Map of Favorite Spots</h3>
+          <p>This project uses mapping apis to plot points for my favorite spots in the city for a do-it-yourself walking tour.</p>
+        </div>
 
-      <div class="card">
-        <img src="images/portfolio-6.png" alt="Calculator">
-        <h3>Calculator</h3>
-        <p>Someone can enter in the numbers they want, and press the big blue button and get the result.</p>
-      </div>
+        <div class="card">
+          <img src="images/portfolio-5.png" alt="Photo Gallery">
+          <h3>Photo Gallery</h3>
+          <p>This project shows pictures from a recent trip to the viewer and allows them to easily navigate through photos.</p>
+        </div>
+
+        <div class="card">
+          <img src="images/portfolio-6.png" alt="Calculator">
+          <h3>Calculator</h3>
+          <p>Someone can enter in the numbers they want, and press the big blue button and get the result.</p>
+        </div>
+      </div> <!-- End of Portfolio-Cards -->
     </div> <!-- End of Portfolio -->
 
     <div class="contact">
@@ -75,7 +78,7 @@
 
     <footer>
       <p>Student name</p>
-      <p>BACK TO TOP</p>
+      <p><a href="#top">BACK TO TOP</a></p>
     </footer>
   </body>
 </html>

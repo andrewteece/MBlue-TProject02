@@ -1,62 +1,193 @@
 /* ----- BASICS ----- */
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   text-align: center;
-  background-color: lightgray;
+  background-color: #F7F7F9;
+  color: #44444D;
 }
 
+a {
+  text-decoration: none;
+  color: #72747E;
+}
+
+h2 {
+  font-size: .9em;
+  margin: 40px auto;
+}
+
+/* ----- HEADER ----- */
+
 header {
-  padding: 15px;
+  padding: 20px 20px 60px 20px;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
   margin: 0;
+  padding: 20px 0 10px;
+  font-size: 1.6em;
 }
 
 .main-nav ul {
   padding-left: 0;
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
+  list-style: none;
 }
 
 .main-nav ul li {
-  flex-grow: 1;
-  width: 80%;
-  font-size: 1em;
+  font-size: .9em;
   font-weight: bold;
-  background-color: white;
+  background-color: #fff;
   margin: 5px auto;
-  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 2px;
 }
 
+/* ----- BANNER ----- */
+
 .banner img {
-  width: 60%;
+  margin: 30px auto 20px;
+  width: 75%;
+}
+
+/* ----- PORTFOLIO ----- */
+
+h3 {
+  font-size: 1.15em;
 }
 
 .portfolio {
+  background-color: white;
+  padding-top: 15px;
+}
+
+.portfolio-cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 0 15px;
-  background-color: white;
+}
+
+.card {
+  margin: 20px auto;
 }
 
 .card img {
   width: 100%;
 }
 
+.card p {
+  font-size: .95em;
+}
+
+/* ----- CONTACT ----- */
+
 .contact {
   width: 80%;
   padding-bottom: 50px;
   margin: 15px auto;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #E4E4F1;
 }
 
+.contact p:nth-of-type(1) {
+  margin-bottom: 30px;
+}
+
+/* ----- FOOTER ----- */
+
 footer{
+  font-size: .8em;
   display: flex;
   justify-content: space-between;
   padding: 15px;
+  font-weight: bold;
+}
+
+/* ----- MEDIA QUERIES ------ */
+
+@media (min-width: 768px) {
+
+/* HEADER */
+
+  .main-nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+  }
+
+  .main-nav ul li{
+    background-color: inherit;
+  }
+
+  .main-nav ul li + li {
+    margin-left: 10%;
+  }
+
+/* BANNER */
+
+  .clear:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .banner p {
+    float: left;
+    width: 50%;
+    margin: 30px 15px 20px 0;
+    font-size: 1.3em;
+  }
+
+  .banner img {
+    float: right;
+    width: 40%;
+  }
+
+/* PORTFOLIO */
+
+  .portfolio-cards {
+    padding: 0;
+  }
+
+  .card {
+    flex-basis: 45%;
+  }
+
+ /* SUBSTITUTE FOR MAIN-NAV */
+
+@media (min-width: 1024px) {
+  body {
+    margin: 20px;
+  }
+
+  .banner p {
+    text-align: left;
+  }
+
+  .main-nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-nav ul {
+    margin: 0 20px 0 0;
+  }
+
+  .card {
+    flex-basis: 30%;
+  }
+
+  .contact {
+    width: 55%;
+  }
 }
