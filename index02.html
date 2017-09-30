@@ -5,6 +5,7 @@
     <title>Student Name</title>
     <meta name=viewport content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles02.css">
   </head>
 
@@ -13,10 +14,10 @@
       <div class="main-nav">
         <h1 id="top">Student Name</h1>
 
-        <ul>
-          <li>HOME</li>
-          <li>PORTFOLIO</li>
-          <li>CONTACT</li>
+        <ul class="nav-bar">
+          <li><a href="#top">HOME</a></li>
+          <li><a href="#portfolio">PORTFOLIO</a></li>
+          <li><a href="#contact">CONTACT</a></li>
         </ul>
       </div>
 
@@ -26,7 +27,7 @@
       </div>
     </header>
 
-    <div class="portfolio">
+    <div id="portfolio">
       <h2>PORTFOLIO</h2>
 
       <div class="portfolio-cards">
@@ -69,7 +70,7 @@
       </div> <!-- End of Portfolio-Cards -->
     </div> <!-- End of Portfolio -->
 
-    <div class="contact">
+    <div id="contact">
       <h2>CONTACT</h2>
       <p>If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!</p>
       <p>Phone <strong>+1 (111) 555-1234</strong></p>
@@ -78,7 +79,14 @@
 
     <footer>
       <p>Student name</p>
-      <p><a href="#top">BACK TO TOP</a></p>
+      <span class="footer-sm"><a href="#top">BACK TO TOP</a></span>
+      <span class="footer-md">
+        <ul class="nav-bar">
+          <li><a href="#top">HOME</a></li>
+          <li><a href="#portfolio">PORTFOLIO</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </span>
     </footer>
   </body>
 </html>
