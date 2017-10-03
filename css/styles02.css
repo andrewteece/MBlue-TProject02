@@ -1,4 +1,5 @@
-#contact/* ----- BASICS ----- */
+/* ----- BASICS ----- */
+
 * {
   box-sizing: border-box;
 }
@@ -13,12 +14,22 @@ body {
 
 a {
   text-decoration: none;
-  color: #72747E;
+  color: #44444D;
+  cursor: pointer;
+}
+
+p {
+  line-height: 1.5em;
 }
 
 h2 {
   font-size: .9em;
   margin: 40px auto;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
 }
 
 /* ----- HEADER ----- */
@@ -38,16 +49,11 @@ h1 {
   font-size: 1.6em;
 }
 
-.nav-bar {
-  padding-left: 0;
-  list-style: none;
-}
-
 .nav-bar li {
   font-size: .9em;
   font-weight: bold;
   background-color: #fff;
-  margin: 5px auto;
+  margin: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 2px;
@@ -58,6 +64,11 @@ h1 {
 .banner img {
   margin: 30px auto 20px;
   width: 75%;
+  transition: .5s;
+}
+
+.banner img:hover {
+  box-shadow: 0 0 50px 7px lightblue;
 }
 
 /* ----- PORTFOLIO ----- */
@@ -80,6 +91,14 @@ h3 {
 
 .card {
   margin: 20px auto;
+  transition-duration: .5s;
+}
+
+.card:hover {
+  background-color: #B1CCFA;
+  color: darkblue;
+  padding: 15px;
+  transform: scale(1.1);
 }
 
 .card img {
@@ -90,27 +109,49 @@ h3 {
   font-size: .95em;
 }
 
+/* ----- SKILLS ----- */
+
+#skills {
+  background-color: #fff;
+  margin: 25px auto 15px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.skills li {
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  background-color: lightblue;
+  border-radius: 15px;
+  padding: 2% 5%;
+  margin: 3% 5%;
+  transition: .3s;
+}
+
+.skills li:hover {
+  color: darkblue;
+  transform: scale(1.1);
+}
+
 /* ----- CONTACT ----- */
 
 #contact {
   width: 80%;
   padding-bottom: 50px;
   margin: 15px auto;
-  border-bottom: 1px solid #E4E4F1;
-}
-
-#contact p:nth-of-type(1) {
-  margin-bottom: 30px;
 }
 
 /* ----- FOOTER ----- */
 
 footer{
   font-size: .8em;
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 5%;
   padding: 15px;
-  font-weight: bold;
+  border-top: 2px solid #E4E4F1;
 }
 
   .footer-md {
@@ -120,6 +161,10 @@ footer{
 /* ----- MEDIA QUERIES ------ */
 
 @media (min-width: 768px) {
+
+  body {
+    font-size: 18px;;
+  }
 
 /* HEADER */
 
@@ -137,18 +182,6 @@ footer{
     margin-left: 10%;
   }
 
-  footer {
-    margin-right: 15px;
-  }
-
-  .footer-sm {
-    display: none;
-  }
-
-  .footer-md {
-    display: inline;
-  }
-
 /* BANNER */
 
   .clear:after {
@@ -160,8 +193,9 @@ footer{
   .banner p {
     float: left;
     width: 50%;
-    margin: 30px 15px 20px 0;
-    font-size: 1.3em;
+    margin: 30px 15px 15px 0;
+    font-size: 1.1em;
+    text-align: left;
   }
 
   .banner img {
@@ -178,6 +212,34 @@ footer{
   .card {
     flex-basis: 45%;
   }
+
+  /* CONTACT */
+
+  #contact {
+    width: 65%;
+  }
+
+  /* FOOTER */
+
+  footer {
+    margin-right: 15px;
+  }
+
+  .footer-sm {
+    display: none;
+  }
+
+  .footer-md {
+    display: inline;
+    text-align: right;
+    width: 50%;
+  }
+
+  .footer-md a {
+    font-size: .8em;
+    padding-left: 5%;
+  }
+}
 
 
 @media (min-width: 1024px) {
